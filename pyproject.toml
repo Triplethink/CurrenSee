@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "currensee"
+version = "0.1.0"
+description = "ETL pipeline with CLI (lol) for currency exchange rates from Open Exchange Rates API"
+authors = ["Robert Wünsch <wunschr@gmail.com>"]
+readme = "README.md"
+packages = [{include = "currensee", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+requests = "^2.31.0"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+typer = "^0.11.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-mock = "^3.12.0"
+ruff = "^0.1.6"
+mypy = "^1.7.0"
+pre-commit = "^3.5.0"
+freezegun = "^1.2.2"
+types-requests = "^2.31.0.10"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+strict_optional = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF", "W"]
+ignore = ["B008"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.isort]
+known-first-party = ["currensee"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
