@@ -2,7 +2,7 @@
 Here I'm answering all the answers from the assignment as well as my design decisions.
 
 ## 1. Evaluate market options
-- the whole process of choosing the best provider is described in the [Evaluation Document](docs/EVALUATION.md) file.
+- the whole process of choosing the best provider is described in the `docs/EVALUATION.md` file.
 - in short, the winner for me was [Open Exchange Rates](https://openexchangerates.org) as it has free tier with:
     - hourly and daily values
     - historical values
@@ -45,7 +45,7 @@ Here I'm answering all the answers from the assignment as well as my design deci
     - updated once per day via insert
     - the table is joinable with transactions ( e.g. something like `fact_payments`, `fact_orders`) and financial reports
     - exposed via some BI layer
-- Communication of this project is described in [Communication Document](docs/COMMUNICATION.md) file.
+- Communication of this project is described in `docs/COMMUNICATION.md` file.
 - the potential value of the final data to the organization:
     - Accurate Financial Reporting and Analysis
     - improvement for BI team

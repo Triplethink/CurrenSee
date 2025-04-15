@@ -20,7 +20,7 @@ Let's fake here some outputs from the discussion:
 4. _"NO (if possible)"_
 
 ## Phase 2: Research & Implementation
-1. The first user story will be about researching the available sources with exchange rates data. NOTE: This could be a job for BI Analyst, for my POC here in this repo I've used Google and AI tools with Deep Research feature - for details you can read [Evaluation Document](docs/EVALUATION.md) document.
+1. The first user story will be about researching the available sources with exchange rates data. NOTE: This could be a job for BI Analyst, for my POC here in this repo I've used Google and AI tools with Deep Research feature - for details you can read `docs/EVALUATION.md` document.
 2. The research user story has one-two winners, this should be summarized in a Confluence subpage and discussed - first with the engineering team and later with stakeholders. We should doublecheck if the pros and cons of the selected provider are OK for them.
 3. Let's say that they like it. We should now also contact somebody in our company who is responsible for (dis)approving usage of external data sources (maybe Head of Data?, CTO or somebody like that).
 4. Everything approved, let's start coding (and update Confluence page with the approvals, just for transparency).
